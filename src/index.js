@@ -6,6 +6,8 @@ exports.min = function min (array) {
      min = array[i];   
    } else if (arguments.length == 0) {
      return 0;
+   } else if (array.length == 0){
+     return 0;
    }
   }
 return min;
@@ -17,6 +19,8 @@ exports.max = function max (array) {
    if(array[i] > max){
      max = array[i];   
    } else if(arguments.length == 0) {
+     return 0;
+   } else if (array.length == 0){
      return 0;
    }
   }
