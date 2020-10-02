@@ -5,7 +5,7 @@ exports.min = function min (array) {
    if(array[i] < min){
      min = array[i];   
    } else if(array.lenght == 0){
-     return 0;
+     min = 0;
    }
   }
 return min;
@@ -17,12 +17,17 @@ exports.max = function max (array) {
    if(array[i] > max){
      max = array[i];   
    } else if(array.lenght == 0){
-     return 0;
+     max = 0;
    }
   }
 return max;
 }
 
 exports.avg = function avg (array) {
-   return arr.reduce((a, b) => (a + b)) / arr.length;
+  let sum = 0;
+  let count = array.length;
+  for (i =0; i<count; i++) {
+    sum += array[i];
+  }
+  return sum/count;
 }
