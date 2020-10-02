@@ -4,7 +4,7 @@ exports.min = function min (array) {
  for(let i = 1; i < array.length; i++){
    if(array[i] < min){
      min = array[i];   
-   } else if (array.length == 0) {
+   } else if (arguments.length == 0) {
      return 0;
    }
   }
@@ -16,7 +16,7 @@ exports.max = function max (array) {
  for(let i = 1; i < array.length; i++){
    if(array[i] > max){
      max = array[i];   
-   } else if(array.length == 0) {
+   } else if(arguments.length == 0) {
      return 0;
    }
   }
