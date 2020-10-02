@@ -1,10 +1,11 @@
 
 exports.min = function min (array) {
  let min = array[0];
+ if(arguments.length == 0){
+    return 0;
+ }  
  for(let i = 1; i < array.length; i++){
-   if(arguments.length == 0){
-     return 0;   
-   } else if (array[i] < min) {
+    else if (array[i] < min) {
      min = array[i];
    } 
   }
@@ -13,10 +14,11 @@ return min;
 
 exports.max = function max (array) {
  let max = array[0];
- for(let i = 1; i < array.length; i++){
-   if(arguments.length == 0){
+ if(arguments.length == 0){
     return 0;   
-   } else if(array[i] > max) {
+   } 
+ for(let i = 1; i < array.length; i++){
+   else if(array[i] > max) {
     max = array[i];
    } 
   }
